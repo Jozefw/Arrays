@@ -74,13 +74,21 @@
     // 7. sort Exercise
     // Sort the people alphabetically by last name
     const peopleLastName = people.sort(function(a,b){
-      
+
     }) 
 
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+    const conveyance = data.reduce(function(sumObj,travel){
+      if( !sumObj[travel] ) {
+        sumObj[travel] = 0;
+      } 
+      sumObj[travel]++;
+      return sumObj;
+    },{})
+    console.table(conveyance);
   </script>
 </body>
 </html>
